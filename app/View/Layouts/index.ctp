@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Beiskenov</title>
+		<title>Beiskenov.loc</title>
 		<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
