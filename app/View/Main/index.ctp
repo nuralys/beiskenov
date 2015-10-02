@@ -36,7 +36,7 @@
 						<div class="obl_part">
 				<div class="cr">
 					<div class="a_menu">
-						<a href="#">Перейти к услугам</a>
+						<a href="#">ТЕкст для Нуралы</a>
 						<ul>
 							<li></li>
 						</ul>
