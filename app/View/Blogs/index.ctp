@@ -25,20 +25,13 @@
 						</div>
 				</div>
 				<aside class="u_aside">
+				<?php //debug($news); ?>
 					<div class="useful">
 						<span class="heading">Новости и акции</span>
 						<ul class="c_ul">
-							<li><a href="#">Эндоскопическая подтяжка лица. </a></li>
-							<li><a href="#">Эндоскопический лифтинг</a></li>
-							<li><a href="#">Подтяжка лица</a></li>
-							<li><a href="#">Блефаропластика – пластика век</a></li>
-							<li><a href="#">Увеличение груди</a></li>
-							<li><a href="#">Подтяжка груди</a></li>
-							<li><a href="#">Уменьшение груди</a></li>
-							<li><a href="#">Эндоскопическая подтяжка лица. Эндоскопический лифтинг.</a></li>
-							<li><a href="#">Подтяжка лица</a></li>
-							<li><a href="#">Увеличение груди</a></li>
-							<li><a href="#">Эндоскопическая подтяжка лица. Эндоскопический лифтинг.</a></li>
+						<?php foreach($news as $news_item):?>
+							<li><a href="/news/<?=$news_item['News']['id']?>"><?=$news_item['News']['title']?></a></li>
+						<?php endforeach?>
 						</ul>
 					</div>
 				</aside>

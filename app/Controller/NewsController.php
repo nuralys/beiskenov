@@ -2,6 +2,7 @@
 
 class NewsController extends AppController{
 
+	public $uses = array('News', 'Blog');
 	public function admin_index(){
 		$news = $this->News->find('all');
 		$this->set(compact('news'));
@@ -66,7 +67,8 @@ class NewsController extends AppController{
 
 	public function index(){
 		$news = $this->News->find('all');
-		$this->set(compact('news'));
+		$blog = $this->Blog->find('all');
+		$this->set(compact('news', 'blog'));
 	}
 
 	public function view($id){
