@@ -10,7 +10,7 @@
 				<div class="content">
 						<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=mzqit64SHakoDqknIZsPz8NGME3OE9Iy&height=315"></script>
 						<ul class="con_ul">
-							<li>Адрес: Сейфулинна 34 (пересичение Омарова - Ауэзова)</li>
+							<li>Адрес: Сейфулинна 35 (пересичение Омарова - Ауэзова)</li>
 							<li>Call-Центр: 8 (7172) 26-48-56, 8778 911 00 11</li>
 							<li>Регистратура: 8 (7172) 26-48-55</li>
 							<li>E-mail: familyclinic@mail.ru</li>
