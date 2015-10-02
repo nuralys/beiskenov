@@ -82,6 +82,9 @@ class BlogsController extends AppController{
 			throw new NotFoundException('Такой страницы нет...');
 		}
 		$post = $this->Blog->findById($id);
-		$this->set(compact('post'));
+		$blog = $this->Blog->find('all', array(
+			'fields' => array('id', 'title')
+			));
+		$this->set(compact('post', 'blog'));
 	}
 }

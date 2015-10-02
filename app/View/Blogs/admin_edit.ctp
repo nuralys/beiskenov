@@ -4,6 +4,7 @@
 echo $this->Form->create('Blog', array('type' => 'file'));
 echo $this->Form->input('title', array('label' => 'Название'));
 echo $this->Form->input('body', array('label' => 'Текст', 'id' => 'editor'));
+echo $this->Form->input('date', array('label' => 'Дата'));
 ?>
 <img src="/img/blog/thumbs/<?=$data['Blog']['img']?>">
 <?

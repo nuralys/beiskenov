@@ -76,6 +76,9 @@ class NewsController extends AppController{
 			throw new NotFoundException('Такой страницы нет...');
 		}
 		$post = $this->News->findById($id);
-		$this->set(compact('post'));
+		$news = $this->News->find('all', array(
+			'fields' => array('id', 'title')
+			));
+		$this->set(compact('post', 'news'));
 	}
 }

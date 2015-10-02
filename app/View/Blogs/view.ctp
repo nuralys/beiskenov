@@ -22,17 +22,11 @@
 					<div class="useful">
 						<span class="heading">Ползеные информации</span>
 						<ul class="c_ul">
-							<li><a href="#">Эндоскопическая подтяжка лица. </a></li>
-							<li><a href="#">Эндоскопический лифтинг</a></li>
-							<li><a href="#">Подтяжка лица</a></li>
-							<li><a href="#">Блефаропластика – пластика век</a></li>
-							<li><a href="#">Увеличение груди</a></li>
-							<li><a href="#">Подтяжка груди</a></li>
-							<li><a href="#">Уменьшение груди</a></li>
-							<li><a href="#">Эндоскопическая подтяжка лица. Эндоскопический лифтинг.</a></li>
-							<li><a href="#">Подтяжка лица</a></li>
-							<li><a href="#">Увеличение груди</a></li>
-							<li><a href="#">Эндоскопическая подтяжка лица. Эндоскопический лифтинг.</a></li>
+							<?php foreach($blog as $item):?>
+							<?php if($item['Blog']['id'] != $post['Blog']['id'] ): ?>
+							<li><a href="/blog/<?=$item['Blog']['id']?>"><?=$item['Blog']['title']?></a></li>
+						<?php endif ?>
+						<?php endforeach ?>
 						</ul>
 					</div>
 				</aside>
