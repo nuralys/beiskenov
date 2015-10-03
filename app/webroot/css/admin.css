@@ -11,3 +11,17 @@ ul.services-list ul li {
 ul.services-list > li {
     font-weight: bold;
 }
+div#goodMessage {
+    background-color: #11DF17;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.about_txt .blocks td {
+    vertical-align: top;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.about_txt .blocks img {
+    width: 140px;
+}
