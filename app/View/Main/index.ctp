@@ -27,19 +27,48 @@
 			<h3 class="up_heading">Услуги пластической хирургии</h3>
 			<div class="z_slider">
 				<div class="cr">
-					<a class="a_menu" href="#">Перейти к услугам</a>
+					<div class="a_menu">
+						<div class="rel">
+							<a class="glav" href="#">Перейти к услугам</a>
+							<div class="sub_usl">
+								<div class="frame">
+									<a href="/services/plastika_litsa">Пластика лица</a>
+									<a href="/services/masterskaya_idealnoy_grudi">Мастерская идеальной груди</a>
+									<a href="/services/plastika_tela">Пластика тела</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="rt-showcase">
+					<div id="main">
+					  <div id="iphone">
+						<div id="webpage"><img src="img/123.jpg" width="1400" height="732">
+						  <div id="retina">
+							<div class="text"></div>
+							<div class="blik"><img src="img/blik.png" alt="Лупа" width="240" height="240"></div>
+						  </div>
+						</div>
+					  </div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="oblasty">
 			<h3 class="up_heading">Оперируемые области золотого сечения</h3>
-						<div class="obl_part">
+					<div class="obl_part">
 				<div class="cr">
 					<div class="a_menu">
-						<a href="#">ТЕкст для Нуралы</a>
-						<ul>
-							<li></li>
-						</ul>
+						<div class="rel">
+							<a class="glav" href="#">Перейти к услугам</a>
+							<div class="sub_usl">
+								<div class="frame">
+									<a href="/services/plastika_litsa">Пластика лица</a>
+									<a href="/services/masterskaya_idealnoy_grudi">Мастерская идеальной груди</a>
+									<a href="/services/plastika_tela">Пластика тела</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="c_dev"></div>
 					<div class="left_sides sides">

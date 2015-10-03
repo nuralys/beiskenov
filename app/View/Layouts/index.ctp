@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Beiskenov.loc</title>
+		 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
 		<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
@@ -12,7 +13,7 @@
 		<?php
 		echo $this->fetch('script');
 
-		echo $this->Html->css(array('normalize', 'style', 'source/jquery.fancybox.css', 'source/jquery.fancybox-buttons.css', 'source/jquery.fancybox-thumbs.css')); 
+		echo $this->Html->css(array('normalize', 'style', 'source/jquery.fancybox.css', 'source/jquery.fancybox-buttons.css', 'source/jquery.fancybox-thumbs.css,')); 
 		echo $this->Html->script(array('jquery-1.9.0.min', 'lib/jquery-1.10.1.min.js', 'lib/jquery.mousewheel-3.0.6.pack.js', 'source/jquery.fancybox.js', 'source/helpers/jquery.fancybox-buttons.js?v=1.0.5', 'source/helpers/jquery.fancybox-thumbs.js?v=1.0.7', 'source/helpers/jquery.fancybox-media.js?v=1.0.6'));
 		?>
 		<script type="text/javascript">
@@ -235,7 +236,7 @@
 					<div class="right_num">
 						<div class="show_p">						
 							<button>Показать номер</button>
-							<span class="tel">(7172) 31-66-07</span>
+							<span class="tel"> (7172) 26-48-56, 8778 911 00 11</span>
 							<span>+7</span>		
 						</div>
 						<a class="callback fancybox" href="#inline1" rel="group">Заказать звонок</a>
@@ -291,11 +292,13 @@
 			</div>
 		</footer>
 		</div>
-		<script type="text/javascript">
+		<script>
 		$('.show_p button').on('click', function(){
 			$('.show_p button').css('display','none');
 			$('.show_p .tel').css('display','block');
 		})
 		</script>
+		<script src="../js/separate-js/jquery.lettering-0.6.1.min.js"></script>
+		<script src="../js/main.min.js"></script>
 	</body>
 </html>

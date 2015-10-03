@@ -1,6 +1,10 @@
+<div class="admin">
+	<h2>Административная панель сайта</h2>
+</div>
+<a class="add_b" href="/admin/blocks/add">+ Добавить блок</a>
 <h1>Список блоков</h1>
 
-<table>
+<table class="blocks">
 	<tr>
 		<th>Изображение</th>
 		<th>Название</th>
@@ -20,4 +24,3 @@
 	</tr>
 <?php endforeach ?>
 </table>
-<p><a href="blocks/add">Добавить блок</a></p>

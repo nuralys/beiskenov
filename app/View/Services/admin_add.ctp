@@ -1,4 +1,4 @@
-<h3>Добавление услуги</h3>
+﻿<h3>Добавление услуги</h3>
 <?php 
 // debug($s_list);
 echo $this->Form->create('Service');

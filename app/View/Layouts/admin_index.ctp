@@ -32,12 +32,9 @@
 					<a href="/">
 						<img alt="" title="" src="/img/logo.jpg"/>
 					</a>
-					
-					
 				</div>
 			</div>
 		</header>
-		
 		<section>
 			<div class="cr ov">
 				<div class="content">
