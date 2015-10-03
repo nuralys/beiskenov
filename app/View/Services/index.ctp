@@ -1,10 +1,5 @@
 <div class="heading_up cr">
 			<h1><?php echo $service['Service']['title'] ?></h1>
-			<?php //debug($breadcrumbs); ?>
-			
-			<?php //debug($service); ?>
-<?php //echo $service_id; ?>
-			<?php //debug($services); ?>
 			<ul>
 				<li><a href="/">Главная</a></li>
 				<?php if($breadcrumbs): ?>

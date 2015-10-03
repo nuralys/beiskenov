@@ -12,8 +12,9 @@ class NewsController extends AppController{
 		if($this->request->is('post')){
 			$this->News->create();
 			$data = $this->request->data['News'];
-			if(!$data['img']['name']){
-				unset($data['img']);
+			// debug($data);
+			 if(!$data['img']['name']){
+			 	unset($data['img']);
 			}
 			if($this->News->save($data)){
 				$this->Session->setFlash('Сохранено', 'default', array(), 'good');

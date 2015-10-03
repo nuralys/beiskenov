@@ -26,7 +26,7 @@ class ServicesController extends AppController{
 		$getChildrenServices = $this->_getChildrenServices($services, $service_id);
 		// debug($getChildrenServices);
 		$blocks = $this->getRightBlock($service_id);
-
+		
 		$breadcrumbs = $this->_searchParent($services, $service);
 		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'breadcrumbs', 'getChildrenServices', 'blocks', 'service_tree'));
 	}
@@ -87,7 +87,12 @@ class ServicesController extends AppController{
 	public function admin_add(){
 		if($this->request->is('post')){
 			$this->Service->create();
-			$data = $this->request->data['Service'];
+
+			// $data = $this->request->data['Service'];
+			$slug = Inflector::slug($this->request->data['Service']['title']);
+			$data[] = $this->request->data['Service'];
+			$data[] = array('alias'=>$slug);
+			$data = array_merge($data[0],$data[1]);
 			
 			if($this->Service->save($data)){
 				$this->Session->setFlash('Сохранено', 'default', array(), 'good');
