@@ -6,9 +6,9 @@ class ServicesController extends AppController{
 
 	public function admin_index(){
 		$service_tree = $this->Service->find('threaded');
-			$services1 = $this->_catMenuHtml($service_tree);
-			$test = 'test';
-			$this->set(compact('services1', 'test', 'service_tree'));
+		$services1 = $this->_catMenuHtml($service_tree);
+		$test = 'test';
+		$this->set(compact('services1', 'test', 'service_tree'));
 	}
 
 	public function index($service_alias = null){
@@ -20,12 +20,30 @@ class ServicesController extends AppController{
 			throw new NotFoundException("Такой страницы нету");
 		}
 		$services = $this->Service->find('all');
+		$service_tree = $this->Service->find('threaded');
 		$service_id = $service['Service']['id'];
 		//Получаем 1 уровень вложенных услуг
 		$getChildrenServices = $this->_getChildrenServices($services, $service_id);
 		// debug($getChildrenServices);
 		$blocks = $this->getRightBlock($service_id);
-		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'getChildrenServices', 'blocks'));
+
+		$breadcrumbs = $this->_searchParent($services, $service);
+		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'breadcrumbs', 'getChildrenServices', 'blocks', 'service_tree'));
+	}
+
+	protected function _searchParent($services, $service){
+		$data = array();
+		foreach ($services as $v) {
+			if($v['Service']['id'] == $service['Service']['parent_id']){
+				$data['Breadcrumbs']['id'] = $v['Service']['id'];
+				$data['Breadcrumbs']['title'] = $v['Service']['title'];
+				$data['Breadcrumbs']['alias'] = $v['Service']['alias'];
+				$data['Breadcrumbs']['parent_id'] = $v['Service']['parent_id'];
+				// $data['test'] = $data[$service['Service']['parent_id']]['Breadcrumbs']['parent_id'];
+				// $this->_searchParent($services, $data['test']);
+			}
+		}
+		return $data;
 	}
 
 	protected function _getChildrenServices($services, $service_id){
@@ -147,4 +165,5 @@ class ServicesController extends AppController{
 		include APP . "View/Elements/cats_select_tpl.ctp";
 		return ob_get_clean();
 	}
+
 }
