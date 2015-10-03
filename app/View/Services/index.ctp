@@ -30,7 +30,19 @@
 							<?php endif ?>
 							<?php //debug($blocks); ?>
 						</div>
-<a class="callback" href="#">Записаться на прием</a>
+<a class="callback fancybox" href="#inline2" rel="group">Записаться на прием</a>
+						<div id="inline2" style="display:none;">
+							<div class="modal_div">
+								<span class="title_z">Записаться на прием</span>
+								<form>
+									<input type="text" class="modal_f" placeholder="Имя...">
+									<div class="help-block">Необходимо заполнить «Имя».</div>
+									<input type="text" class="modal_f" placeholder="Почта...">
+									<div class="help-block">Необходимо заполнить «Почту».</div>
+									<button type="submit" name="submit1">Записаться</button>
+								</form>
+							</div>
+						</div>
 			</div>
 		</div>
 		<aside class="u_aside">
