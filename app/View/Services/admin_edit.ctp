@@ -1,3 +1,4 @@
+<div class="admin_add">
 <h3>Редактирование</h3>
 <?php 
 // debug($service);
@@ -16,10 +17,17 @@ echo $this->Form->input('title', array('label' => 'Название'));
 </div>
 <?php
 echo $this->Form->input('body', array('id' => 'editor', 'label' => 'Текст'));
+?>
+<div class="price_part">
+<?
 echo $this->Form->input('price', array('label' => 'Цена от'));
 echo $this->Form->input('price_to', array('label' => 'Цена до'));
+?>
+</div>
+<?
 echo $this->Form->end('Сохранить');
 ?>
 <script type="text/javascript">
 	 CKEDITOR.replace( 'editor' );
 </script>
+</div>

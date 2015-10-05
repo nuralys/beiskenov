@@ -1,4 +1,32 @@
-<div class="slider"></div>
+		<div class = 'iosSlider'>
+			<div class = 'slider'>			
+				<div class = 'item' id = 'item1'>					
+					<div class = 'text1'><span>Бейскенов Ильяс Саматович</span></div>										
+					<div class = 'text2'><span>Ведущий пластический хирург</span></div>					
+				</div>				
+				<div class = 'item' id = 'item2'>				
+					<div class = 'text1'><span>Бейскенов Ильяс Саматович</span></div>										
+					<div class = 'text2'><span>Ведущий пластический хирург</span></div>							
+				</div>				
+				<div class = 'item' id = 'item3'>				
+					<div class = 'text1'><span>Бейскенов Ильяс Саматович</span></div>										
+					<div class = 'text2'><span>Ведущий пластический хирург</span></div>						
+				</div>				
+				<div class = 'item' id = 'item4'>				
+					<div class = 'text1'><span>Бейскенов Ильяс Саматович</span></div>										
+					<div class = 'text2'><span>Ведущий пластический хирург</span></div>					
+				</div>
+			</div>
+			<div class = 'iosSliderButtons'>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+			</div>
+		</div>
+		<div class="beis_rel">
+			<div class="beis_sl"></div>
+		</div>
 		<section class="benefits">
 			<div class="cr">
 				<div class="b_row">

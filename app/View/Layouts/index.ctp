@@ -10,12 +10,17 @@
 		echo $this->fetch('css');
 		?>
 		<meta name="viewport" content="width=1100">
+		
 		<?php
 		echo $this->fetch('script');
 
 		echo $this->Html->css(array('normalize', 'style', 'source/jquery.fancybox.css', 'source/jquery.fancybox-buttons.css', 'source/jquery.fancybox-thumbs.css,')); 
 		echo $this->Html->script(array('jquery-1.9.0.min', 'lib/jquery-1.10.1.min.js', 'lib/jquery.mousewheel-3.0.6.pack.js', 'source/jquery.fancybox.js', 'source/helpers/jquery.fancybox-buttons.js?v=1.0.5', 'source/helpers/jquery.fancybox-thumbs.js?v=1.0.7', 'source/helpers/jquery.fancybox-media.js?v=1.0.6'));
 		?>
+		<script type="text/javascript" src = "js/jquery.easing-1.3.js"></script>
+		
+		<!-- iosSlider plugin -->
+		<script src = "js/jquery.iosslider.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function() {
 			/*
@@ -169,6 +174,76 @@
 			});
 		});
 	</script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+			
+				$('.iosSlider').iosSlider({
+					scrollbar: true,
+					snapToChildren: true,
+					desktopClickDrag: true,
+					scrollbarLocation: 'top',
+					scrollbarMargin: '10px 10px 0 10px',
+					scrollbarBorderRadius: '0',
+					responsiveSlideWidth: true,
+					navSlideSelector: $('.iosSliderButtons .button'),
+					infiniteSlider: true,
+					startAtSlide: '2',
+					onSlideChange: slideContentChange,
+					onSlideComplete: slideContentComplete,
+					onSliderLoaded: slideContentLoaded
+				});
+				
+				function slideContentChange(args) {
+					
+					/* indicator */
+					$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+					$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+					
+				}
+				
+				function slideContentComplete(args) {
+					
+					if(!args.slideChanged) return false;
+					
+					/* animation */
+					$(args.sliderObject).find('.text1, .text2').attr('style', '');
+					
+					$(args.currentSlideObject).children('.text1').animate({
+						right: '50%',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					$(args.currentSlideObject).children('.text2').delay(200).animate({
+						right: '50%',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+				}
+				
+				function slideContentLoaded(args) {
+					
+					/* animation */
+					$(args.sliderObject).find('.text1, .text2').attr('style', '');
+					
+					$(args.currentSlideObject).children('.text1').animate({
+						right: '50%',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					$(args.currentSlideObject).children('.text2').delay(200).animate({
+						right: '50%',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					/* indicator */
+					$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+					$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+					
+				}
+				
+			});
+		</script>
+		
 	</head>
 	<body>
 		<div class="main">
