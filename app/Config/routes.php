@@ -1,5 +1,6 @@
 <?php
 
+	Router::connectNamed(array('lang'));
 	Router::connect('/admin/users/:action', array('controller' => 'users','admin' => true));
 	Router::connect('/admin/blog', array('controller' => 'blogs','admin' => true));
 	Router::connect('/admin/blog/:action/*', array('controller' => 'blogs','admin' => true));
