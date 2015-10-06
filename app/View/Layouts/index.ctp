@@ -275,9 +275,9 @@
 							</a>
 							<div class="sub_p">
 								<div class="frame">
-									<a href="/services/plastika_litsa">Пластика лица</a>
-									<a href="/services/masterskaya_idealnoy_grudi">Мастерская идеальной груди</a>
-									<a href="/services/plastika_tela">Пластика тела</a>
+									<?php foreach($parent_services as $service): ?>
+									<a href="/services/<?=$service['Service']['alias'];?>"><?=$service['Service']['title'];?></a>
+									<?php endforeach ?>
 								</div>
 							</div>
 						</li>
