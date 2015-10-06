@@ -12,7 +12,7 @@
 					<div class="about_txt">
 						<img src="/img/blog/<?=$post['Blog']['img']?>"/>
 						<h6><?=$post['Blog']['title']?></h6>
-						<div class="date">
+						<div class="date_p">
 							<span><?php echo $this->Time->format($post['Blog']['date'], '%d-%m-%Y', 'invalid'); ?></span>
 						</div>
 						<?=$post['Blog']['body']?>

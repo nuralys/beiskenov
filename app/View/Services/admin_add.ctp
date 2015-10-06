@@ -1,5 +1,7 @@
 ﻿<div class="admin_add">
-<h3>Добавление услуги</h3>
+	<div class="ad_up">
+		<h2>Добавление услуги</h2>
+	</div>
 <?php 
 // debug($s_list);
 echo $this->Form->create('Service');
@@ -33,4 +35,3 @@ echo $this->Form->input('price_to', array('label' => 'Цена до:'));
 <script type="text/javascript">
 	 CKEDITOR.replace( 'editor' );
 </script>
-</div>
