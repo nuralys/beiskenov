@@ -1,13 +1,15 @@
 <div class="admin_add">
-<h3>Редактирование</h3>
+	<div class="ad_up">
+		<h2>Редактирование</h2>
+	</div>
 <?php 
 // debug($service);
 // debug($s_list);
 echo $this->Form->create('Service');
-echo $this->Form->input('title', array('label' => 'Название'));
+echo $this->Form->input('title', array('label' => 'Название:'));
 ?>
 <div class="input select">
-	<label for="ServiceParentId">Услуга</label>
+	<label for="ServiceParentId">Услуга:</label>
 	<select name="data[Service][parent_id]" id="ServiceParentId">
 		<option value="0">-</option>
 		<?php foreach($s_list as $k => $v):?>
@@ -16,12 +18,12 @@ echo $this->Form->input('title', array('label' => 'Название'));
 	</select>
 </div>
 <?php
-echo $this->Form->input('body', array('id' => 'editor', 'label' => 'Текст'));
+echo $this->Form->input('body', array('id' => 'editor', 'label' => 'Текст:'));
 ?>
 <div class="price_part">
 <?
-echo $this->Form->input('price', array('label' => 'Цена от'));
-echo $this->Form->input('price_to', array('label' => 'Цена до'));
+echo $this->Form->input('price', array('label' => 'Цена от:'));
+echo $this->Form->input('price_to', array('label' => 'Цена до:'));
 ?>
 </div>
 <?

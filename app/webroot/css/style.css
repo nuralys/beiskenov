@@ -88,6 +88,7 @@ body{
     top: 17px;
     left: 0px;
 	display:none;
+	    z-index: 5555;
 }
 .frame{
 	background-color:#ebebeb;
@@ -231,6 +232,13 @@ body{
 	color: #767676;
     text-align: left;
 }
+.header h4{
+    font-size: 22px;
+    color: #3895DA;
+    margin-left: 35px;
+    line-height: 118px;
+    float: left;
+}
 /*end header*/
 .iosSlider {
 	width: 1920px;
@@ -340,7 +348,15 @@ body{
     width: 323px;
     z-index: 555;
 }
-
+#badMessage {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 11px;
+    color: #F71111;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'PtSansBold';
+}
 .benefits{
 	text-align:center;
 	padding:40px 0px;
@@ -703,15 +719,15 @@ body{
 .about_txt{
 	overflow:hidden;
 }
-.about_txt .date{
+.about_txt .date_p{
     margin-top: 8px;
     overflow: hidden;
     margin-bottom: 10px;
 }
-.about_txt .date span{
+.about_txt .date_p span{
 	float:right;
 	color:#4d4d4d;
-	font-size:0.975em;
+	font-size:0.875em;
 	font-family:Calibri;
 }
 .about_txt img{
@@ -819,12 +835,6 @@ body{
 .b_item a:hover{
 	text-decoration:underline;
 }
-.date{
-	color:#4d4d4d;
-	float:right;
-	font-size:0.875em;
-}
-
 /*end useful info*/
 
 /*begin galery*/
@@ -969,10 +979,24 @@ footer .cr {
     overflow: hidden;
 }
 /*begin admin part*/
-.admin h2,.admin_add h3{
+.admin_add h3{
     color: #767676;
     font-size: 1.35em;
     margin-bottom: 18px;
+}
+.ad_up{
+	overflow:hidden;
+	border-bottom:1px solid #ccc;
+	height: 42px;
+    margin-bottom: 15px;
+}
+.ad_up h2{
+    float: left;
+    line-height: 48px;
+    font-size: 19px;
+    color: #767676;
+    font-weight: bold;
+    font-family: "PTsansBold";
 }
 .admin label{
 	display:block;
@@ -1009,9 +1033,9 @@ footer .cr {
     cursor: pointer;
 }
 .add_b{
-    margin-bottom: 15px;
-    font-size: 1.075em;
-   background: #1e5799;
+	font-size: 1.025em;
+	float: right;
+	background: #1e5799;
     background: -moz-linear-gradient(top, #7ac7fa 0%,#7AB2D8 50%,#66afe4 51%,#5da3da 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7ac7fa), color-stop(50%,#7AB2D8), color-stop(51%,#66afe4), color-stop(100%,#5da3da));
     background: -webkit-linear-gradient(top, #7ac7fa 0%,#7AB2D8 50%,#66afe4 51%,#5da3da 100%);
@@ -1020,7 +1044,7 @@ footer .cr {
     background: linear-gradient(to bottom, #7ac7fa 0%,#7AB2D8 50%,#66afe4 51%,#5da3da 100%);
     display: inline-block;
     color: #fff;
-    padding: 9px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     font-family: Calibri;
     font-weight: bold;
@@ -1058,7 +1082,7 @@ footer .cr {
 .admin_add .text input{
 	height:22px;
 	text-indent:10px;
-	width:320px;
+	width: 540px;
 }
 .admin_add .select select{
 	height:28px;
@@ -1085,6 +1109,9 @@ footer .cr {
     float: left;
     line-height: 25px;
 }
+.price_part div input{
+	text-indent:6px;
+}
 .admin_del h3{
 	color: #767676;
     font-size: 1.35em;
@@ -1103,6 +1130,77 @@ footer .cr {
 .admin_del a:hover{
 	background-color: #2E82B9;
 	cursor:pointer;
+}
+.art_list li{
+	margin-bottom:8px;
+}
+.art_list li a:hover{
+	text-decoration:underline;
+}
+.edit_bot{
+	margin-top:15px;
+	overflow: hidden;
+}
+.admin_add .date label{
+	width: 70px;
+    float: left;
+    line-height: 28px;
+}
+.admin_add .date select{
+	height:28px;
+	margin:0 5px;
+}
+.admin_add .date select:first-child{
+	margin-left:0px;
+}
+.bot_r{
+	float: right;
+    width: 415px;
+} 
+.input.file label{
+	display:block;
+	margin-bottom:10px;
+	float:none;
+}
+div#goodMessage {
+    margin-bottom: 15px;
+}
+.galer_a{
+	overflow:hidden;
+}
+.galer_a li {
+    float: left;
+    width: 440px;
+    margin-right: 20px;
+	margin-bottom:20px;
+}
+.galer_a li:nth-child(2n) {
+	margin-right:0px;
+}
+.galer_a li img{
+	width:100%;
+}
+.galer_a li  div{
+	margin-bottom:8px;
+}
+.gall_add .input.select label{
+	width: 145px;
+}
+.blocks tr th{
+	padding-bottom: 5px;
+}
+.blocks .tr_n{
+	width:280px;
+}
+.blocks .tw_n{
+	width:208px;
+}
+.tw_n {
+	font-weight:bold;
+	font-family:'PTsansbold';
+}
+.blocks tr a:hover{
+	text-decoration:underline;
 }
 /*end admin part*/
 

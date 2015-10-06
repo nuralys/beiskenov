@@ -32,6 +32,7 @@
 					<a href="/">
 						<img alt="" title="" src="/img/logo.jpg"/>
 					</a>
+					<h4>Административная панель cайта</h4>
 				</div>
 			</div>
 		</header>
@@ -61,8 +62,7 @@
 		</section>
 		<footer>
 			<div class="cr">
-				<img src="/img/logo.jpg"/>
-				
+				<img src="/img/logo.jpg"/>				
 				<div class="f_row f_third">
 					<span>© 2015, BEYSKENOV.COM</span>
 					<span>Все права защищены.</span>
