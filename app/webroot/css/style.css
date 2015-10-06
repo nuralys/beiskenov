@@ -441,6 +441,7 @@ body{
 }
 #rt-showcase {
   position: relative;
+  background-color: #E3EAE2;
   overflow: hidden;
   width: 100%; }
 
