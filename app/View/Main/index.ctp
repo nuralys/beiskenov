@@ -100,37 +100,51 @@
 					</div>
 					<div class="c_dev"></div>
 					<div class="left_sides sides">
-						<div>
-							<span>Эндоскопическая</span> 
-							<p>подтяжка лба и бровей</p>
-						</div>
-						<div>
-							<span>Отопластика</span>
-							<p>устранение лопоухости коррекция мочек уха</p>
-						</div>
-						<div>
-							<span>Подтяжка лица</span>
-							<p>SMAS лифтинг Эндоскопический лифтинг</p>
-						</div>
+						<a href="/services/endoskopicheskaya">
+							<div>
+								<span>Эндоскопическая</span> 
+								<p>подтяжка лба и бровей</p>
+							</div>
+						</a>
+						<a href="/services/otoplastika">
+							<div>
+								<span>Отопластика</span>
+								<p>устранение лопоухости коррекция мочек уха</p>
+							</div>
+						</a>
+						<a href="/services/podtyazhka_litsa">
+							<div>
+								<span>Подтяжка лица</span>
+								<p>SMAS лифтинг Эндоскопический лифтинг</p>
+							</div>
+						</a>
 					</div>
 					<div class="arows"></div>
 					<div class="right_sides sides">
+					<a href="/services/plastika_vek">
 						<div>
-							<span>Пластика вел</span>
-							<p>верхних и нижних</p>
+							<span>Пластика век</span>
+							<p>верхняя блефаропластика, нижняя блефаропластика, европеизация</p>
 						</div>
+					</a>
+					<a href="/services/rinoplastika">
 						<div>
 							<span>Ринопластика</span>
-							<p>изменение кончиков носа устранение горбин</p>
+							<p>коррецкия спинки носа и устранение горбинки</p>
 						</div>
+					</a>
+					<a href="/services/nosogubnye_skladki">
 						<div>
 							<span>Носогубные складки</span>
-							<p>и губы, линофилинг, контурная пластика</p>
+							<p>липофилинг и контурная пластика лица</p>
 						</div>
+					</a>
+					<a href="/services/plastika_shei">
 						<div>
 							<span>Пластика шеи</span>
-							<p>платизмопластика подбородочной области</p>
+							<p>коррекция контуров шеи и подбородка</p>
 						</div>
+					</a>
 					</div>
 				</div>
 			</div>
