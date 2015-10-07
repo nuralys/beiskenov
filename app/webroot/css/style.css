@@ -753,6 +753,14 @@ body{
 .about_txt p{
 	color:#4d4d4d;
 }
+.about_txt ul {
+    font-size: 0.905em;
+    line-height: 1.385em;
+    color: #4d4d4d;
+    font-family: Calibri;
+    margin-bottom: 5px;
+    text-indent: 15px;
+}
 .bot_txt{
 	border-bottom:1px solid #60a8de;
 	padding-bottom:12px;
@@ -767,7 +775,7 @@ body{
 	display:block;
 }
 .c_ul li{
-	margin-bottom:10px;
+	margin-bottom:6px;
 	font-family:Calibri;
 	font-size:0.975em;
 }
