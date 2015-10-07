@@ -30,6 +30,8 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
+	public $uses = array('Page', 'Service', 'Blog');
+
 	public function index($page_alias = null){
 		if(is_null($page_alias)){
 			throw new NotFoundException("Такой страницы нету");
@@ -38,7 +40,11 @@ class PagesController extends AppController {
 		if(!$page){
 			throw new NotFoundException("Такой страницы нету");
 		}
-		$this->set(compact('page_alias', 'page'));
+		$parent_services = $this->Service->find('all',array(
+			'conditions' => array('parent_id'=>0)
+			));
+		$blog = $this->Blog->find('all');
+		$this->set(compact('page_alias', 'page', 'parent_services', 'blog'));
 	}
 
 	public function admin_edit($page_id){

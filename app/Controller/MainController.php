@@ -4,7 +4,6 @@ class MainController extends AppController{
 
 	public $uses = array('Main', 'Service');
 	public function index(){
-		$test = 'test';
 		$parent_services = $this->Service->find('all',array(
 			'conditions' => array('parent_id'=>0)
 			));

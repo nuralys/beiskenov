@@ -28,7 +28,12 @@ class ServicesController extends AppController{
 		$blocks = $this->getRightBlock($service_id);
 		
 		$breadcrumbs = $this->_searchParent($services, $service);
-		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'breadcrumbs', 'getChildrenServices', 'blocks', 'service_tree'));
+
+		$parent_services = $this->Service->find('all',array(
+			'conditions' => array('parent_id'=>0)
+			));
+		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'breadcrumbs', 'getChildrenServices', 
+			'blocks', 'service_tree', 'parent_services'));
 	}
 
 	protected function _searchParent($services, $service){
@@ -65,9 +70,6 @@ class ServicesController extends AppController{
 		return $blocks;
 	}
 
-	public function getServices(){
-			
-	}
 
 	protected function _catMenuHtml($service_tree = false){
 		if(!$service_tree) return false;

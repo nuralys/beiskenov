@@ -2,6 +2,7 @@
 
 class GalleryController extends AppController{
 
+	public $uses = array('Gallery' ,'Service');
 
 	public function admin_index(){
 		$data = $this->Gallery->find('all');
@@ -54,6 +55,9 @@ class GalleryController extends AppController{
 		$plastika_tela = $this->Gallery->find('all', array(
 			'conditions' => array('category_id' => 3)
 			));
-		$this->set(compact('random', 'plastika_litsa', 'grud', 'plastika_tela'));
+		$parent_services = $this->Service->find('all',array(
+			'conditions' => array('parent_id'=>0)
+			));
+		$this->set(compact('random', 'plastika_litsa', 'grud', 'plastika_tela', 'parent_services'));
 	}
 }
