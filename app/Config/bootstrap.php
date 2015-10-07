@@ -179,5 +179,6 @@ Inflector::rules('transliteration', array(
 	'/Ъ/' => '',
 	'/Э/' => 'E',
 	'/Ю/' => 'Yu',
-	'/Я/' => 'Ya'
+	'/Я/' => 'Ya',
+	'/ /' => '_'
 ));

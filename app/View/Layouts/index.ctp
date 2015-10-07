@@ -266,12 +266,12 @@
 					<ul class="nav">
 						<li class="active">
 							<a href="/">
-								Главная
+								<?php echo __('Главная'); ?>
 							</a>
 						</li>
 						<li class="sub">
 							<a href="">
-								Услуги
+								<?php echo __('Услуги'); ?>
 							</a>
 							<div class="sub_p">
 								<div class="frame">
@@ -283,28 +283,28 @@
 						</li>
 						<li class="sub">
 							<a href="/page/about">
-								О хирурге
+								<?php echo __('О хирурге'); ?>
 							</a>
 							
 						</li>
 						<li>
 							<a href="/blogs">
-								Полезная информация
+								<?php echo __('Полезная информация'); ?>
 							</a>
 						</li>
 						<li>
 							<a href="/gallery">
-								Галерея
+								<?php echo __('Галерея'); ?>
 							</a>
 						</li>
 						<li>
 							<a href="/news">
-								Новости/Акции
+								<?php echo __('Новости/Акции'); ?>
 							</a>
 						</li>
 						<li>
 							<a href="/contacts">
-								Контакты
+								<?php echo __('Контакты'); ?>
 							</a>
 						</li>
 					</ul>

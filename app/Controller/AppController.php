@@ -53,6 +53,12 @@ class AppController extends Controller {
 		}else{
 			$this->layout = 'index';
 		}
+
+		if(isset($this->request->params['named']['lang'])){
+			Configure::write('Config.language', $this->request->params['named']['lang']);
+		}else{
+			Configure::write('Config.language', 'rus');
+		}
 		$this->set(compact('admin'));
 
 	}
