@@ -2,7 +2,7 @@
 
 class BlogsController extends AppController{
 
-	public $uses = array('Blog', 'News');
+	public $uses = array('Blog', 'News', 'Service');
 
 	public function admin_index(){
 		$blogs = $this->Blog->find('all');
@@ -74,7 +74,10 @@ class BlogsController extends AppController{
 		$news = $this->News->find('all', array(
 			'fields' => array('id', 'title')
 			));
-		$this->set(compact('blogs', 'news'));
+		$parent_services = $this->Service->find('all',array(
+			'conditions' => array('parent_id'=>0)
+			));
+		$this->set(compact('blogs', 'news', 'parent_services'));
 	}
 
 	public function view($id){
@@ -85,6 +88,9 @@ class BlogsController extends AppController{
 		$blog = $this->Blog->find('all', array(
 			'fields' => array('id', 'title')
 			));
-		$this->set(compact('post', 'blog'));
+		$parent_services = $this->Service->find('all',array(
+			'conditions' => array('parent_id'=>0)
+			));
+		$this->set(compact('post', 'blog', 'parent_services'));
 	}
 }
