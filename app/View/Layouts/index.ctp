@@ -187,7 +187,7 @@
 					responsiveSlideWidth: true,
 					navSlideSelector: $('.iosSliderButtons .button'),
 					infiniteSlider: true,
-					startAtSlide: '2',
+					startAtSlide: '1',
 					onSlideChange: slideContentChange,
 					onSlideComplete: slideContentComplete,
 					onSliderLoaded: slideContentLoaded
