@@ -16,11 +16,13 @@
 							<span><?php echo $this->Time->format($post['News']['date'], '%d-%m-%Y', 'invalid'); ?></span>
 						</div>
 						<?=$post['News']['body']?>
+
 					</div>
+					<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
 				</div>
 				<aside class="u_aside">
 					<div class="useful">
-						<span class="heading">Ползеные информации</span>
+						<span class="heading">Новости и акции</span>
 						<ul class="c_ul">
 						<?php foreach($news as $item):?>
 							<?php if($item['News']['id'] != $post['News']['id'] ): ?>
