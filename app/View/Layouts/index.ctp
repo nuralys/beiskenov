@@ -178,6 +178,7 @@
 			$(document).ready(function() {
 			
 				$('.iosSlider').iosSlider({
+					autoSlide:true,
 					scrollbar: true,
 					snapToChildren: true,
 					desktopClickDrag: true,
