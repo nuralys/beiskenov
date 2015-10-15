@@ -47,7 +47,7 @@
 				</div>
 				<div class="b_row">
 					<div class="img b5"></div>
-					<span>Индвивидуальны подход</span>
+					<span>Индвивидуальный подход</span>
 				</div>
 			</div>
 		</section>

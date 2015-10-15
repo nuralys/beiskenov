@@ -795,11 +795,14 @@ body{
 }
 
 .c_ul li:before{
-	content:'•';
-	float:left;
-	line-height:1.1em;
-	margin-right:5px;
-	color:#4d4d4d;
+	content: ''; 
+	float: left; 
+	margin-right: 8px; 
+	background-color: #4d4d4d; 
+	width: 6px; 
+	height: 6px; 
+	margin-top: 6px; 
+	border-radius: 50%;
 }
 .useful{
 	padding:12px 14px;
