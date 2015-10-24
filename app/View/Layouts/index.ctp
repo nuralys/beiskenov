@@ -2,7 +2,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Beiskenov.loc</title>
+		<title><?php echo $title_for_layout; ?> | beiskenov.com</title>
+		<?php if(isset($meta['keywords'])): ?>
+		<meta name="keywords" content="<?=$meta['keywords']?>">
+		<?php endif; ?>
+		<?php if(isset($meta['description'])): ?>
+			<meta name="description" content="<?=$meta['description']?>">
+		<?php endif; ?>
+		
 		 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
 		<?php
 		echo $this->Html->meta('icon');

@@ -7,8 +7,7 @@ class ServicesController extends AppController{
 	public function admin_index(){
 		$service_tree = $this->Service->find('threaded');
 		$services1 = $this->_catMenuHtml($service_tree);
-		$test = 'test';
-		$this->set(compact('services1', 'test', 'service_tree'));
+		$this->set(compact('services1', 'service_tree'));
 	}
 
 	public function index($service_alias = null){
@@ -22,6 +21,11 @@ class ServicesController extends AppController{
 		$services = $this->Service->find('all');
 		$service_tree = $this->Service->find('threaded');
 		$service_id = $service['Service']['id'];
+
+		//мета теги
+		$title_for_layout = $service['Service']['title'];
+		$meta['keywords'] = $service['Service']['keywords'];
+		$meta['description'] = $service['Service']['description'];
 		//Получаем 1 уровень вложенных услуг
 		$getChildrenServices = $this->_getChildrenServices($services, $service_id);
 		// debug($getChildrenServices);
@@ -32,7 +36,7 @@ class ServicesController extends AppController{
 		$parent_services = $this->Service->find('all',array(
 			'conditions' => array('parent_id'=>0)
 			));
-		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'breadcrumbs', 'getChildrenServices', 
+		$this->set(compact('services', 'service_alias', 'service', 'service_id', 'title_for_layout','meta', 'breadcrumbs', 'getChildrenServices', 
 			'blocks', 'service_tree', 'parent_services'));
 	}
 

@@ -24,6 +24,8 @@ echo $this->Form->input('body', array('id' => 'editor', 'label' => 'Текст:'
 <?
 echo $this->Form->input('price', array('label' => 'Цена от:'));
 echo $this->Form->input('price_to', array('label' => 'Цена до:'));
+echo $this->Form->input('keywords', array('label' => 'Ключевые слова:'));
+echo $this->Form->input('description', array('label' => 'Описание:'));
 ?>
 </div>
 <?
