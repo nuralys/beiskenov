@@ -651,6 +651,13 @@ body{
 .usl_text img{
 	width:100%;
 	margin-bottom:6px;
+	position: relative;
+    left: -15px;
+}
+.usl_text h1 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'PtSansBold';
 }
 .serv_ul{
 	overflow:hidden;
@@ -666,7 +673,7 @@ body{
 	color:#858585;
 }
 .serv_ul li.active a{
-	color:#207ec6;
+    color: #5A5A5A;
 	text-decoration:underline;
 }
 .serv_ul li:hover a{
@@ -971,7 +978,7 @@ footer .f_row{
 }
 .f_row span,.f_second ul li a{
 	display:block;
-	color:#9f9f9f;
+	color: #5A5A5A;
 	margin-bottom:6px;
 	font-size:0.875em;
 }
